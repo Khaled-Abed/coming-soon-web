@@ -13,15 +13,17 @@
       align-items: center;
       background: #f9f9f9;
       overflow: hidden; /* Prevent scrollbars */
+      width: 100%;
     }
     img {
-      max-width: 100%;
+      width: 100%; /* Ensure the image takes full width */
       height: auto;
+      object-fit: contain; /* Preserve aspect ratio and fit within screen */
     }
     /* Optional: add media query for smaller screens */
     @media (max-width: 768px) {
       img {
-        max-width: 90%; /* Ensure image doesn't stretch too much on smaller devices */
+        width: 90%; /* Slightly reduce image size on tablets */
       }
     }
     @media (max-width: 480px) {
@@ -29,7 +31,7 @@
         padding: 10px; /* Some padding on smaller screens */
       }
       img {
-        max-width: 100%; /* Allow image to fill screen width on very small screens */
+        width: 100%; /* Allow image to fill screen width on very small screens */
       }
     }
   </style>
