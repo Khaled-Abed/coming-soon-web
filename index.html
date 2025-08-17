@@ -12,10 +12,25 @@
       justify-content: center;
       align-items: center;
       background: #f9f9f9;
+      overflow: hidden; /* Prevent scrollbars */
     }
     img {
       max-width: 100%;
       height: auto;
+    }
+    /* Optional: add media query for smaller screens */
+    @media (max-width: 768px) {
+      img {
+        max-width: 90%; /* Ensure image doesn't stretch too much on smaller devices */
+      }
+    }
+    @media (max-width: 480px) {
+      body {
+        padding: 10px; /* Some padding on smaller screens */
+      }
+      img {
+        max-width: 100%; /* Allow image to fill screen width on very small screens */
+      }
     }
   </style>
 </head>
